@@ -34,14 +34,14 @@ function onGalleryItemClick(e) {
 }
 
 function createGalleryMarkup(items) {
-    return items.map(({ preview, original }) => {
+    return items.map(({ preview, original, description }) => {
             return `<div class="gallery__item">
                         <a class="gallery__link" href="${original}">
                             <img
                             class="gallery__image"
                             src="${preview}"
                             data-source="${original}"
-                            alt="Image description"
+                            alt="${description}"
                             />
                         </a>
                     </div>`})
